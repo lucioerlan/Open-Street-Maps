@@ -1,0 +1,405 @@
+#body {
+    background: url(../img/launch.jpg);
+    background-size: cover;
+    margin-top: -60px;
+    text-align: center;
+    background-position: 30% 45%;
+    height: 100vh;
+    padding: 100px 0
+}
+
+.style-form h2 {
+    color: #fff;
+    font-size: 29px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 15px
+}
+
+.style-form {
+    width: 25%;
+    margin: 0 auto!important;
+    background: rgba(0, 0, 0, .34);
+    padding: 60px 35px
+}
+
+input[type=email] {
+    width: 88%;
+    padding: 15px 0 15px 42px;
+    border: 1px solid #fff;
+    outline: 0;
+    font-size: 14px;
+    color: #fff;
+    margin: 14px 0;
+    font-family: Roboto, sans-serif
+}
+
+input[type=email] {
+    background: url(../img/mail.png) no-repeat 10px 11px;
+    background-size: 24px
+}
+
+.style-form span {
+    font-size: 16px;
+    color: #fff;
+    float: left;
+    width: 32%;
+    margin-top: 8px;
+    font-family: Roboto, sans-serif
+}
+
+.style-form h6 {
+    font-size: 16px;
+    float: right;
+    width: 37%;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    text-decoration: underline
+}
+
+.style-form a {
+    color: #fff;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all
+}
+
+.style-form a:hover {
+    color: rgba(208, 95, 216, .9);
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all
+}
+
+input[type=submit] {
+    padding: 12px 38px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #062857;
+    color: #fff;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    margin: 45px auto 31px;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all
+}
+
+input[type=submit]:hover {
+    background: #163055;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all
+}
+
+.style-form p a {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 10px
+}
+
+.style-form p {
+    font-size: 17px;
+    color: #fff
+}
+
+@media(max-width:1440px) {
+    .style-form {
+        width: 28%
+    }
+}
+
+@media(max-width:1366px) {
+    .style-form {
+        width: 30%
+    }
+}
+
+@media(max-width:1280px) {
+    .style-form {
+        width: 33%
+    }
+    .agileheader h1 {
+        font-size: 41px
+    }
+    .style-form h2 {
+        font-size: 27px
+    }
+}
+
+@media(max-width:1080px) {
+    .style-form {
+        width: 49%
+    }
+}
+
+@media(max-width:1024px) {
+    .style-form {
+        width: 40%
+    }
+}
+
+@media(max-width:991px) {
+    .style-form {
+        width: 42%
+    }
+    .agileheader h1 {
+        font-size: 38px
+    }
+    .style-form h2 {
+        font-size: 25px
+    }
+}
+
+@media(max-width:800px) {
+    .style-form {
+        width: 51%
+    }
+    .agileheader h1 {
+        font-size: 34px;
+        letter-spacing: 9px
+    }
+    .style-form h2 {
+        font-size: 23px
+    }
+}
+
+@media(max-width:768px) {
+    .style-form {
+        width: 54%
+    }
+    .agileheader h1 {
+        font-size: 33px;
+        letter-spacing: 8px
+    }
+    .style-form h2 {
+        font-size: 22px
+    }
+    .footer-w3l {
+        padding: 2em 0 8.7em
+    }
+}
+
+@media(max-width:736px) {
+    .style-form {
+        width: 56%
+    }
+}
+
+@media(max-width:667px) {
+    .style-form {
+        width: 61%
+    }
+    .style-form h2 {
+        font-size: 21px
+    }
+}
+
+@media (max-width:640px) {
+    .style-form {
+        width: 64%
+    }
+}
+
+@media (max-width:600px) {
+    .style-form {
+        width: 69%
+    }
+}
+
+@media (max-width:568px) {
+    .style-form {
+        width: 73%
+    }
+    .style-form p a {
+        font-size: 17px
+    }
+    .style-form h2 {
+        font-size: 20px
+    }
+}
+
+@media (max-width:480px) {
+    .style-form h2 {
+        font-size: 19px
+    }
+    .style-form span {
+        width: 38%;
+        font-size: 15px
+    }
+    .style-form h6 {
+        width: 44%;
+        font-size: 15px
+    }
+    .style-form p {
+        font-size: 16px;
+        width: 105%
+    }
+    .style-form p a {
+        font-size: 17px;
+        letter-spacing: 0
+    }
+    input[type=submit] {
+        font-size: 17px
+    }
+    input[type=email] {
+        width: 86%
+    }
+}
+
+@media (max-width:414px) {
+    .style-form h2 {
+        font-size: 18px
+    }
+    .style-form {
+        padding: 34px 26px
+    }
+    .style-form span {
+        font-size: 15px;
+        width: 41%;
+        margin-top: 9px
+    }
+    input[type=email] {
+        width: 84%;
+        padding: 13px 0 13px 40px;
+        margin: 10px 0
+    }
+    .style-form h6 {
+        font-size: 15px;
+        width: 48%;
+        margin-top: 9px
+    }
+    .style-form p {
+        width: 95%;
+        line-height: 32px
+    }
+    .style-form p a {
+        font-size: 16px;
+        letter-spacing: 1px
+    }
+    input[type=submit] {
+        margin: 45px auto 25px
+    }
+}
+
+@media (max-width:384px) {
+    .style-form {
+        padding: 30px 26px
+    }
+    input[type=email] {
+        margin: 10px 0;
+        width: 83%;
+        padding: 10px 0 10px 39px
+    }
+    input[type=email] {
+        background: url(../img/mail.png) no-repeat 9px 8px;
+        background-size: 22px
+    }
+    .style-form span {
+        width: 44%;
+        margin-top: 12px
+    }
+    .style-form h6 {
+        width: 51%;
+        margin-top: 12px
+    }
+    input[type=submit] {
+        padding: 12px 52px;
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin: 34px auto 28px
+    }
+    .style-form p {
+        width: 102%;
+        line-height: 29px
+    }
+}
+
+@media (max-width:375px) {
+    .style-form span {
+        width: 45%;
+        margin-top: 10px
+    }
+    .style-form h6 {
+        width: 53%;
+        margin-top: 10px;
+        font-size: 14px
+    }
+    .style-form {
+        padding: 24px 34px;
+        width: 65%
+    }
+    .style-form span {
+        width: 100%
+    }
+    .style-form h6 {
+        width: 100%
+    }
+    .style-form h2 {
+        letter-spacing: 1px
+    }
+    input[type=submit] {
+        padding: 12px 33px;
+        font-size: 15px;
+        letter-spacing: 0;
+        margin: 21px auto 12px
+    }
+    .style-form p {
+        width: 100%;
+        line-height: 28px
+    }
+    input[type=email] {
+        width: 82%
+    }
+}
+
+@media (max-width:320px) {
+    .style-form h2 {
+        font-size: 17px;
+        letter-spacing: 0
+    }
+    .style-form {
+        padding: 24px 28px;
+        width: 73%
+    }
+    input[type=email] {
+        width: 81%;
+        padding: 12px 0 12px 38px
+    }
+    input[type=email] {
+        background: url(../img/mail.png) no-repeat 8px 9px;
+        background-size: 23px
+    }
+    .style-form span {
+        font-size: 14px
+    }
+    input[type=submit] {
+        font-size: 15px
+    }
+    .style-form p {
+        font-size: 15px
+    }
+    .style-form p a {
+        font-size: 15px;
+        letter-spacing: 0
+    }
+}
+
+#ecorp_logo {
+    margin: 0 0 30px 0
+}
