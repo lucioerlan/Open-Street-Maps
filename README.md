@@ -21,7 +21,7 @@ Heroku on Free, Not supported Redis- Cached!
 
 ### Running with Docker
 
-![docker_pmp](https://user-images.githubusercontent.com/47280551/73631023-7e568880-4636-11ea-8012-1b74bdb23981.png)
+![docker_pmp](https://user-images.githubusercontent.com/67064886/88505654-76a4ea80-cfae-11ea-8c46-167a760d9027.png)
 
 ```
 $ docker-compose up
@@ -57,7 +57,7 @@ $ npm start
 
 
 ### Insert data into MongoDB
-![seeds](https://user-images.githubusercontent.com/47280551/73143443-b3803b00-4078-11ea-9cdb-578f67b05872.png)
+![seeds](https://user-images.githubusercontent.com/67064886/88505657-77d61780-cfae-11ea-830d-24f6fe663163.png)
 ```sh
 $ node src/seeds/Seed.js
 ```
@@ -69,7 +69,7 @@ $ node src/seeds/Seed.js
 
 
 ### To perform tasks using Grunt
-![taks](https://user-images.githubusercontent.com/47280551/73143484-3acdae80-4079-11ea-87f5-8c6716a13c0f.png)
+![taks](https://user-images.githubusercontent.com/67064886/88505656-773d8100-cfae-11ea-9065-1d8c42fe30a3.png)
 
 ```sh
 $ /client grunt server
