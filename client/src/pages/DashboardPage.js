@@ -26,7 +26,7 @@ class App extends Component {
 
   fetchData() {
     fetch(
-      "http://localhost:5000/tracking"
+      "https://open-map-api.herokuapp.com/tracking"
     )
       .then(res => res.json())
       .then(steine => {
@@ -72,8 +72,6 @@ class App extends Component {
           onSelectStein={this.handleSelectStein}
         />
         <ModalAdd color="secondary" buttonLabel="Add" />
-
-        
 
 
       </div>
