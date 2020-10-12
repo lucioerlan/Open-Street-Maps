@@ -1,6 +1,8 @@
+[![LICENSE](https://img.shields.io/github/license/arshadkazmi42/awesome-github-init.svg)](https://github.com/arshadkazmi42/awesome-github-init/LICENSE)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Flucioerlan%2FAdvanced-Open-Street-Maps&count_bg=%23E71A18&title_bg=%23555555&icon=dependabot.svg&icon_color=%23E7E7E7&title=views&edge_flat=false)](https://hits.seeyoufarm.com)
 
-                                                 Javascript Map 🎯
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](r)                   
+<p align=center> Javascript Map 🎯        
+  
 ![mapagif-min](https://user-images.githubusercontent.com/47280551/87181289-702d2800-c2b8-11ea-9c60-25de21be0401.gif)
 
 
