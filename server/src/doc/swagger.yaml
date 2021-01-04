@@ -1,28 +1,23 @@
 swagger: "2.0"
 info:
-  description: '<font size="2" color="red">Licença</font>'
+  description: '<font size="2" color="red">MIT Licença</font>'
   version: "1.0.3"
   title: "Tracking Api"
   license:
-    name: "Erlan Lucio"
-    url: "https://github.com/erlanlucio"
+    name: "REST TO SOAP"
+    url: "https://github.com/lucioerlan"
 host: "localhost:5000"
-tags:
-  - name: "Tracking"
-    description: "Service to crud the grid on the frontend."
-    externalDocs:
-      description: "Issues"
-      url: "erlanlucio/ui-ux-performarce/issues"
+basePath: "/api"
 schemes:
   - "http"
 paths:
   /tracking/:
     get:
       tags:
-        - "TRACKINGS REQUESTS"
+        - "ROUTES"
       summary: "Response to the request on mongoDB"
-      description: "Get all tracking."
-      operationId: "gettracking"
+      description: "Get all tracking"
+      operationId: "get-tracking"
       produces:
         - "application/xml"
         - "application/json"
@@ -33,17 +28,17 @@ paths:
 
     post:
       tags:
-        - "TRACKINGS REQUESTS"
+        - "ROUTES"
       summary: "Post tracking."
-      description: "Insert a tracking, passing the id as a parameter."
-      operationId: "posttracking"
+      description: "Insert a tracking"
+      operationId: "post-tracking"
       produces:
         - "application/xml"
         - "application/json"
       parameters:
         - in: "body"
           name: "body"
-          description: "List of tracking object"
+          description: "List of tracking"
           required: true
           schema:
             type: "array"
@@ -52,7 +47,6 @@ paths:
       responses:
         default:
           description: "successful operation"
-
 
 definitions:
   tracking:
