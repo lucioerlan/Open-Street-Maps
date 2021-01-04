@@ -1,80 +1,73 @@
-'use strict';
-
-const db = require('./src/connection/ConectionMongo');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const helmet = require('helmet');
-const express = require('express');
-const bodyParser = require('body-parser');
-const requireDir = require('require-dir');
-const fs = require('fs')
-const path = require('path')
-const morgan = require('morgan')
-const Keygrip = require('keygrip');
-const cookieSession = require('cookie-session');
-const app = express();
-const accessLogStream = fs.createWriteStream(path.join(__dirname, '.log'), { flags: 'a' })
-
-
-
 // Constants
 const PORT = process.env.PORT || 5000;
-const HOST = '0.0.0.0';
 
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const compression = require('compression');
+const express = require('express');
+const ip = require('ip');
 
-app.use(cors());
-app.disable('x-powered-by');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(helmet());
+const app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
+const connectDB = require('./src/database/db-config');
 require('dotenv').config();
 require('colors');
 
-app.use(morgan('combined', { stream: accessLogStream }));
+const {
+  responseMiddleware,
+  unauthorizedMiddleware,
+  securityMiddleware,
+} = require('./src/middlewares');
 
-app.use(cookieSession({
-    name: 'session',
-    keys: new Keygrip(['SEKRIT2', 'SEKRIT2'], 'SHA384', 'base64'),
-    maxAge: 5 * 100
-}))
-app.use(function (req, res, next) {
-    req.session.nowInMinutes = Math.floor(Date.now() / 5e3)
-    next()
+const StreetMap = require('./src/routes/StreetMap-routes');
+const SwaggerRoutes = require('./src/doc/swagger-config');
+
+app.use(compression());
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use((req, res, next) => {
+  req.io = io;
+  next();
+});
+app.use(responseMiddleware);
+app.use(unauthorizedMiddleware);
+securityMiddleware(app);
+
+// Routes
+app.use('/api', [StreetMap, SwaggerRoutes]);
+
+// catch 404
+app.use((req, res) =>
+  res.parseReturn({
+    status: 404,
+    errors: [
+      {
+        message: `Invalid Route, Access http://${ip.address()}:${PORT}/api/docs`,
+      },
+    ],
+  })
+);
+
+app.use((err, req, res) => {
+  const error = app.get('env') === 'development' ? err : {};
+  const status = err.status || 500;
+  return res.status(status).json(error);
 });
 
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, contentType,Content-Type, Accept, Authorization");
-    next();
-});
+const startServer = async () => {
+  server.listen(PORT, () => {
+    console.log(
+      `Server is running at port ${PORT}, see more about the application on: http://${ip.address()}:${PORT}/api/docs`
+        .bgMagenta
+    );
+  });
+};
 
+(async () => {
+  await connectDB();
+  await startServer();
+})();
 
-mongoose.connect(db.url, {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-})
-    .then(() => {
-        console.log("Successfully connected to MongoDB.".green)
-    }).catch(err => {
-        console.log(err, 'The MongoDB was not connected.'.red)
-        process.exit()
-    });
-
-
-requireDir('./src/models');
-
-app.use('/', require("./src/routes/TrackingRoute"));
-
-//Error 404
-app.get('*', (req, res) => {
-    res.send({ Error: 'Invalid Command, Access /docs' });
-});
-
-
-app.listen(PORT, HOST);
-    console.log('\n' + `Visit http://localhost:${PORT}/docs`.yellow, '\n');
+module.exports = app;

@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+
+  "extends": ["airbnb-base", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "arrow-parens": 0,
+    "camelcase": 0,
+    "class-methods-use-this": "off",
+    "comma-spacing": [2, { "before": false, "after": true }],
+    "comma-style": [2, "last"],
+    "consistent-return": 0,
+    "eol-last": 2,
+    "function-paren-newline": 0,
+    "implicit-arrow-linebreak": 0,
+    "import/no-extraneous-dependencies": 0,
+    "linebreak-style": 0,
+    "max-len": 1,
+    "no-confusing-arrow": 0,
+    "no-console": "off",
+    "no-empty": "error",
+    "no-multiple-empty-lines": "warn",
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "no-return-assign": 0,
+    "no-tabs": 0,
+    "no-undef": 0,
+    "no-unused-vars": 1,
+    "operator-linebreak": 0,
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  }
+}

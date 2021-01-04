@@ -1,144 +1,67 @@
 swagger: "2.0"
 info:
-  description: "<font size=\"2\" color=\"red\">Licença</font>"
+  description: '<font size="2" color="red">Licença</font>'
   version: "1.0.3"
   title: "Tracking Api"
   license:
     name: "Erlan Lucio"
     url: "https://github.com/erlanlucio"
-host: "localhost:5000" 
+host: "localhost:5000"
 tags:
-- name: "Tracking"
-  description: "Service to crud the grid on the frontend."
-  externalDocs:
-    description: "Issues"
-    url: "erlanlucio/ui-ux-performarce/issues"
+  - name: "Tracking"
+    description: "Service to crud the grid on the frontend."
+    externalDocs:
+      description: "Issues"
+      url: "erlanlucio/ui-ux-performarce/issues"
 schemes:
-- "http"
+  - "http"
 paths:
-
   /tracking/:
     get:
       tags:
-      - "TRACKINGS REQUESTS"
+        - "TRACKINGS REQUESTS"
       summary: "Response to the request on mongoDB"
       description: "Get all tracking."
       operationId: "gettracking"
       produces:
-      - "application/xml"
-      - "application/json"
+        - "application/xml"
+        - "application/json"
       parameters: []
       responses:
         default:
           description: "successful operation"
-          
+
     post:
-          tags:
-          - "TRACKINGS REQUESTS"
-          summary: "Post tracking."
-          description: "Insert a tracking, passing the id as a parameter."
-          operationId: "posttracking"
-          produces:
-          - "application/xml"
-          - "application/json"
-          parameters:
-          - in: "body"
-            name: "body"
-            description: "List of tracking object"
-            required: true
-            schema:
-              type: "array"
-              items:
-                $ref: "#/definitions/tracking"
-          responses:
-            default:
-              description: "successful operation"
-
-  /tracking/{id}:
-    get:
       tags:
-      - "TRACKINGS REQUESTS"
-      summary: "Get tracking by id"
-      description: "Get a tracking, passing the id as a parameter."
-      operationId: "gettracking/id"
+        - "TRACKINGS REQUESTS"
+      summary: "Post tracking."
+      description: "Insert a tracking, passing the id as a parameter."
+      operationId: "posttracking"
       produces:
-      - "application/xml"
-      - "application/json"
+        - "application/xml"
+        - "application/json"
       parameters:
-      - name: "id"
-        in: "path"
-        description: "the id that needs to be fetched. "
-        required: true
-        type: "string"
-      responses:
-        200:
-          description: "successful operation"
+        - in: "body"
+          name: "body"
+          description: "List of tracking object"
+          required: true
           schema:
-            $ref: "#/definitions/tracking"
-        400:
-          description: "Invalid id supplied"
-        404:
-          description: "tracking not found"
-
-
-          
-    put:
-      tags:
-      - "TRACKINGS REQUESTS"
-      summary: "Updated tracking"
-      description: "Change a tracking, passing the id as a parameter."
-      operationId: "updatetracking"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - name: "id"
-        in: "path"
-        description: "the ID that needs to be changed."
-        required: true
-        type: "string"
-      - in: "body"
-        name: "body"
-        description: "Updated tracking object"
-        required: true
-        schema:
-          $ref: "#/definitions/tracking"
+            type: "array"
+            items:
+              $ref: "#/definitions/tracking"
       responses:
-        400:
-          description: "Invalid tracking supplied"
-        404:
-          description: "tracking not found"
-          
-    delete:
-      tags:
-      - "TRACKINGS REQUESTS"
-      summary: "Delete tracking"
-      description: "Delete a tracking, passing the id as a parameter."
-      operationId: "deletetracking"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - name: "id"
-        in: "path"
-        description: "the ID that needs to be deleted."
-        required: true
-        type: "string"
-      responses:
-        400:
-          description: "Invalid id supplied"
-        404:
-          description: "tracking not found"
+        default:
+          description: "successful operation"
 
- 
+
 definitions:
   tracking:
     type: "object"
     required:
-    - "id"
-    - "tracking"
-    - "lat"
-    - "lon"
+      - "id"
+      - "tracking"
+      - "lat"
+      - "lon"
     properties:
       id:
         type: "string"
