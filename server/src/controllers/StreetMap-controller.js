@@ -3,6 +3,14 @@ const Tracking = require('../models/StreetMap-models');
 
 const util = new Util();
 
+/**
+ * The TrackingC API.
+ *
+ * @method index Get all tracking
+ * @method store Insert a tracking
+ */
+
+
 class TrackingController {
   async index(req, res) {
     try {
@@ -25,6 +33,8 @@ class TrackingController {
     try {
       const data = await Tracking.create(req.body);
       util.setSuccess(200, 'tracking Added!', data);
+
+      req.io.emit('notification', data);
 
       return util.send(res);
     } catch (err) {
