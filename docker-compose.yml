@@ -3,7 +3,7 @@ services:
   server:
     build:
       context: ./server/
-    command: /usr/app/node_modules/.bin/nodemon src/index.js
+    command: /usr/app/node_modules/.bin/node src/index.js
     volumes:
       - ./server/:/usr/app
       - /usr/app/node_modules

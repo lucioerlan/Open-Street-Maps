@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "7b503b6c-837b-4e68-9c96-8ee41cb80e22",
+		"name": "API-Advanced-Open-Street-Maps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all tracking",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n          \"id\": \"9fTp63fpZsngr\",\r\n          \"tracking\": \"911970341-4\",\r\n          \"lat\": \"49.6617919\",\r\n          \"lon\": \"32.0477111\",\r\n          \"plate\": \"WBAUC73569V525201\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tracking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tracking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert a tracking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

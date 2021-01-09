@@ -1,37 +1,43 @@
 {
-  "name": "projetomapa",
-  "version": "0.0.0",
-  "private": true,
+  "name": "Advanced-Open-Street-Maps",
+  "version": "1.0.0",
   "author": "Erlan Lucio",
-  "github": "https://github.com/erlanlucio",
-  "issues": "https://github.com/erlanlucio/open-map/issues",
+  "issues": "https://github.com/lucioerlan/Advanced-Open-Street-Maps/issues",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "jest"
+    "dev": "nodemon server.js",
+    "test": "mocha tests/**/*.test.js --timeout 5000 --exit",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "colors": "^1.4.0",
-    "cookie-session": "^1.4.0",
+    "compression": "^1.7.4",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
+    "ip": "^1.1.5",
     "js-yaml": "^3.3.0",
-    "keygrip": "^1.1.0",
+    "moment-timezone": "^0.5.32",
     "mongoose": "^5.8.7",
     "mongoose-paginate": "^5.0.3",
     "mongoose-seed": "^0.6.0",
-    "morgan": "^1.9.1",
-    "redis": "^2.8.0",
-    "require-dir": "^1.2.0",
+    "ms": "^2.1.3",
+    "node-uuid": "^1.4.8",
     "socket.io": "^2.3.0",
-    "swagger-tools": "0.10.1"
+    "swagger-tools": "0.10.1",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "jest": "^24.9.0",
-    "nodemon": "^2.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^8.1.3",
+    "nodemon": "^1.19.4",
     "supertest": "^4.0.2"
   }
 }
