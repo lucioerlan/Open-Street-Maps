@@ -26,12 +26,12 @@ class App extends Component {
 
   fetchData() {
     fetch(
-      "https://open-map-api.herokuapp.com/tracking"
+      "http://192.168.1.9:5000/api/tracking"
     )
       .then(res => res.json())
       .then(steine => {
         const socket = socketIOClient(this.fetchData());
-        socket.on(this.setState({ steine: steine }));
+        socket.on(this.setState({ steine: steine.message }));
       })
       .catch(err => console.log("Erro search data", err));
   }
