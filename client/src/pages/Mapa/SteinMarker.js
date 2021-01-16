@@ -1,6 +1,6 @@
-import { LeafletProvider, MapLayer, withLeaflet } from "react-leaflet";
-import { Marker as LeafletMarker } from "leaflet";
-import React from "react";
+import { LeafletProvider, MapLayer, withLeaflet } from 'react-leaflet';
+import { Marker as LeafletMarker } from 'leaflet';
+import React from 'react';
 
 class SteinMarker extends MapLayer {
   componentDidMount() {
@@ -9,13 +9,13 @@ class SteinMarker extends MapLayer {
       this.leafletElement.openPopup();
     }
 
-    this.leafletElement.on("click", () =>
+    this.leafletElement.on('click', () =>
       this.props.onSelectStein(this.props.id)
     );
   }
 
   componentWillUnmount() {
-    this.leafletElement.off("click");
+    this.leafletElement.off('click');
     super.componentWillUnmount();
   }
 
@@ -54,7 +54,7 @@ class SteinMarker extends MapLayer {
       } else {
         this.leafletElement.dragging.disable();
       }
-    } 
+    }
   }
 
   render() {
@@ -65,8 +65,8 @@ class SteinMarker extends MapLayer {
   }
 }
 
-SteinMarker.defaultProps = {
-  selected: false
-};
-
 export default withLeaflet(SteinMarker);
+
+SteinMarker.defaultProps = {
+  selected: false,
+};

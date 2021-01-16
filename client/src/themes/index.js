@@ -1,4 +1,4 @@
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import {
   blue,
   grey,
@@ -9,41 +9,40 @@ import {
   brown,
   teal,
   green,
-  amber
-} from "@material-ui/core/colors";
+  amber,
+} from '@material-ui/core/colors';
 
 export const availableThemes = [
   {
-    title: "Default",
+    title: 'Default',
     primary: blue,
-    secondary: red
+    secondary: red,
   },
   {
-    title: "VerSummerão",
+    title: 'VerSummerão',
     primary: deepOrange,
-    secondary: orange
+    secondary: orange,
   },
   {
-    title: "Spring",
+    title: 'Spring',
     primary: teal,
-    secondary: green
+    secondary: green,
   },
   {
-    title: "Winter",
+    title: 'Winter',
     primary: grey,
-    secondary: amber
+    secondary: amber,
   },
   {
-    title: "Autumn",
+    title: 'Autumn',
     primary: brown,
-    secondary: pink
+    secondary: pink,
   },
   {
-    title: "Party",
+    title: 'Party',
     primary: pink,
-    secondary: blue
-  }
-
+    secondary: blue,
+  },
 ];
 
 const defaultTheme = {
@@ -58,20 +57,20 @@ const defaultTheme = {
   error: red,
   appBar: {
     height: 57,
-    color: blue[900]
+    color: blue[900],
   },
   drawer: {
     width: 240,
     color: grey[900],
     backgroundColor: brown,
-    miniWidth: 56
+    miniWidth: 56,
   },
   raisedButton: {
-    primaryColor: blue[600]
+    primaryColor: blue[600],
   },
   typography: {
-    useNextVariants: true
-  }
+    useNextVariants: true,
+  },
 };
 
 const theme = createMuiTheme(defaultTheme);

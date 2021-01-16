@@ -1,10 +1,6 @@
-import { render } from "react-dom";
-import routes from "./routes";
-import registerServiceWorker from "./registerServiceWorker";
-import "./styles.scss";
-import "font-awesome/css/font-awesome.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Routes from './Routes';
+import './globalStyle.css';
 
-
-render(routes, document.getElementById("root"));
-registerServiceWorker();
-
+ReactDOM.render(<Routes />, document.getElementById('root'));

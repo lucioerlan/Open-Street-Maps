@@ -1,147 +1,133 @@
+<!-- PROJECT SHIELDS -->
+
+[![PRETTIER](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://gitter.im/jlongster/prettie)
 [![LICENSE](https://img.shields.io/github/license/arshadkazmi42/awesome-github-init.svg)](https://github.com/arshadkazmi42/awesome-github-init/LICENSE)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Flucioerlan%2FAdvanced-Open-Street-Maps&count_bg=%23E71A18&title_bg=%23555555&icon=dependabot.svg&icon_color=%23E7E7E7&title=views&edge_flat=false)](https://hits.seeyoufarm.com)
-
-<p align=center> Javascript Map 🎯        
-  
-![mapagif-min](https://user-images.githubusercontent.com/47280551/87181289-702d2800-c2b8-11ea-9c60-25de21be0401.gif)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/erlanlucio/)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/lucioerlan/Advanced-Open-Street-Maps&count_bg=%23E71A18&title_bg=%23555555&icon=dependabot.svg&icon_color=%23E7E7E7&title=views&edge_flat=false)](https://hits.seeyoufarm.com)
 
 
+<!-- PROJECT -->
+<br />
+<p align="center">
+  <h3 align="center"> 
 
-### Description
-```sh
+   Open Souce Map 🌎
+
+  </h3> 
+  <p align="center">
+    <img src="https://user-images.githubusercontent.com/67064886/104822972-61a26900-5825-11eb-8093-92bca1348e65.gif" alt="Logo" >
+    <br />
+    <br />
+    <a href="https://github.com/lucioerlan/Advanced-Open-Street-Maps/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/lucioerlan/Advanced-Open-Street-Maps/issues">Request Feature</a>
+  </p>
+</p>
 
 
-Swagger documentation : https://open-map-api.herokuapp.com/docs
+<!-- ABOUT THE PROJECT -->
+## 🤔 About The Project
 
-Published Example: https://open-map-front.herokuapp.com
+A free, interactive map, containing several features.
 
-Heroku on Free, Not supported Redis- Cached!
+<br>
 
+
+<!-- INSTALLATION -->
+
+## 🔨 Installation Default
+
+You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
+
+```bash
+git clone https://github.com/lucioerlan/Advanced-Open-Street-Maps.git
+$ cd Advanced-Open-Street-Maps/client  -and-   Advanced-Open-Street-Maps/server
+$ npm install
 ```
 
 <br>
 
-### Running with Docker
 
-![docker_pmp](https://user-images.githubusercontent.com/67064886/88505654-76a4ea80-cfae-11ea-8c46-167a760d9027.png)
+<!-- SETUP -->
+
+## 🔥 Setup  /server
+
+#### Copy or rename the file
+
+```
+$ cp .env-examples .env 
+```
+* Then configure with your connection to MongoDB
+* Popular collection of yours with multiple coordinates ↓
+```bash 
+$ node src/database/seeds/Seed.js
+```
+
+<br>
+
+
+<!-- RUNNING TESTS -->
+
+## 🤓 Running tests On the server and API documents
+
+```bash 
+$ cd Advanced-Open-Street-Maps/server
+```
+
+* Access swagger http://localhost:5000/api/docs 🥇
+* $ npm test
+
+<br>
+
+
+<!-- RUNNING -->
+
+## 🚀 Running Default
+
+```
+$ /client npm start 
+```
+```
+$ /server npm start 
+```
+
+#### Or Run Docker 🐳
 
 ```
 $ docker-compose up
 ```
-<br>
-
-
-
-
-### Installation Default
-```sh
-$ npm install /server
-and
-$ npm install /client
-```
 
 <br>
 
 
+<!-- PACKAGES -->
 
+## 💌 Thanks for these
 
-### Initialization Default
-```sh
-$ npm start 
-
-```
+| [`leaflet`](https://leafletjs.com/) | Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps!<br>
 
 <br>
 
 
+<!-- LICENSE -->
+
+## 🔓 License
+
+This project lives under MIT License. See LICENSE for more details. © - [Erlan Lucio](https://www.linkedin.com/in/erlanlucio/)
 
 
-
-
-### Insert data into MongoDB
-![seeds](https://user-images.githubusercontent.com/67064886/88505657-77d61780-cfae-11ea-830d-24f6fe663163.png)
-```sh
-$ node src/seeds/Seed.js
-```
-
-<br>
-
-
-
-
-
-### To perform tasks using Grunt
-![taks](https://user-images.githubusercontent.com/67064886/88505656-773d8100-cfae-11ea-9065-1d8c42fe30a3.png)
-
-```sh
-$ /client grunt server
-$ /client grunt
-```
-
-<br>
-
-
-
-
-
-###  O'What do these tasks do?
-
-  - <b>Grunt Server</b>: monitoring what you do and possible errors in your code.
-  - <b>Grunt</b>: Minify files and save a backup of your project.
-
-<br>
-
-
-
-### Installation Redis
-| [`Redis Unix`](https://redis.io/download) | <br>
-| [`Redis Windows`](https://github.com/MicrosoftArchive/redis/releases)  |<br>
-
-<br><br>
-
-
-
-## Browser support
-
-
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
-| --------- | --------- | --------- | --------- | --------- | 
-|--------------|--------------|--------------|--------------| 
-
-<br>
-
-
-## 📦 Main Packages
-
-
-| [`express`](https://www.npmjs.com/package/express) | Fast, unopinionated, minimalist web framework for node!<br>
-| [`mongoose`](https://www.npmjs.com/package/mongoose) | Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callback!<br>
-| [`redis`](https://www.npmjs.com/package/redis) | This is a complete and feature rich Redis client for node.js. It supports all Redis commands and focuses on high performance.!|<br>
-| [`socket.io`](https://www.npmjs.com/package/socket.io) | Socket-IO enables real-time bidirectional event-based communication. It consists of:!|<br>
-| [`swagger-tools`](https://www.npmjs.com/package/swagger-tools) | The project provides various tools for integrating and interacting with Swagger!|
-
-<br><br>
-
-
-
-
-
-
-## 🚀 Technologies
-
-![Grunt JS](https://user-images.githubusercontent.com/47280551/71610246-152eb180-2b6e-11ea-8e52-355fa0a10f75.png)
-![open](https://user-images.githubusercontent.com/47280551/73629958-6f220b80-4633-11ea-961d-7d9a8546f223.png)
-![Node JS](https://user-images.githubusercontent.com/47280551/71610252-16f87500-2b6e-11ea-87bc-35c52cf94391.png)
-![React JS](https://user-images.githubusercontent.com/47280551/71610254-17910b80-2b6e-11ea-9997-eef4b39fd673.png)
-![MongoDb](https://williamavasquez.herokuapp.com/img/mongo.png)
-![redis](https://user-images.githubusercontent.com/47280551/73143139-47e89e80-4075-11ea-92c9-9af1d43ce24c.png)
-![Swagger](https://user-images.githubusercontent.com/47280551/71610256-1829a200-2b6e-11ea-9e88-8358de1882f0.png)
-![Sass](https://user-images.githubusercontent.com/47280551/71610255-1829a200-2b6e-11ea-851c-8a7e48ac2eed.png)
-![Docker](https://user-images.githubusercontent.com/47280551/71610243-14961b00-2b6e-11ea-81ab-8ff593eb84b8.png)
-![Heroku](https://user-images.githubusercontent.com/47280551/71610247-15c74800-2b6e-11ea-8720-cba948b1a550.png)
-
-<br><br> 
-
-
-## 🔓 Licença 
-MIT © [Erlan Lúcio](https://www.linkedin.com/in/erlanlucio/)
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png

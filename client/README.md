@@ -31,7 +31,7 @@ npm start
 
 
 ## 🔓 Licença 
-MIT © [Erlan Lúcio](https://br.linkedin.com/in/erlan-lucio)
+MIT © [Erlan Lúcio](https://www.linkedin.com/in/erlanlucio)
 
 
 

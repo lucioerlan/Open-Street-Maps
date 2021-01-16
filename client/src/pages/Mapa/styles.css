@@ -1,0 +1,26 @@
+/* Leaflet */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+.sr-only {
+  display: none;
+}
+
+.leaflet-top {
+  margin-top: 40px !important;
+}
+.leaflet-bar a {
+  height: 32px !important;
+  width: 32px !important;
+}
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+/* Leaflet */
