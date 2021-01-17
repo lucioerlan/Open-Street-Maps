@@ -31,7 +31,15 @@ class TrackingController {
 
   async store(req, res) {
     try {
-      const data = await Tracking.create(req.body);
+      const { id, lat, lon, plate, tracking } = req.body;
+
+      const data = await Tracking.create({
+        id,
+        lat: lat.replace(/[_+=]/g, ''),
+        lon: lon.replace(/[_+=]/g, ''),
+        plate,
+        tracking,
+      });
       util.setSuccess(200, 'tracking Added!', data);
 
       req.io.emit('notification', data);
@@ -43,5 +51,4 @@ class TrackingController {
     }
   }
 }
-
 module.exports = TrackingController;
