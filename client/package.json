@@ -3,12 +3,7 @@
     "author": "Erlan Lucio",
     "issues": "https://github.com/lucioerlan/Advanced-Open-Street-Maps/issues",
     "homepage": "https://open-map-front.herokuapp.com",
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
+    "private": true,
     "dependencies": {
         "@material-ui/core": "^4.11.2",
         "@material-ui/icons": "^4.11.2",
@@ -18,7 +13,7 @@
         "leaflet-draw": "^1.0.4",
         "leaflet-geosearch": "^2.7.0",
         "prop-types": "latest",
-        "react": "^16.8.6",
+        "react": "^16.12.0",
         "react-dom": "^16.8.6",
         "react-draggable": "^4.0.3",
         "react-leaflet": "^2.4.0",
@@ -27,9 +22,15 @@
         "react-leaflet-fullscreen": "^1.0.1",
         "react-leaflet-google-layer": "^1.1.4",
         "react-router-dom": "^5.1.2",
-        "react-scripts": "^3.0.1",
+        "react-scripts": "3.4.0",
         "react-text-mask": "^5.4.3",
         "socket.io-client": "^2.3.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -41,13 +42,13 @@
             "not op_mini all"
         ],
         "development": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
         ]
     },
     "devDependencies": {
-        "eslint": "^5.16.0",
+        "eslint": "^6.6.0",
         "eslint-config-airbnb": "^17.1.1",
         "eslint-config-prettier": "^6.0.0",
         "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",

@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
+    "seed": "node src/database/seeds/Seed.js",
     "test": "mocha tests/**/*.test.js --timeout 5000 --exit",
     "lint": "eslint --fix --ext .js,.jsx ."
   },
