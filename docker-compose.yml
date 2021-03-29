@@ -1,26 +1,65 @@
-version: '2'
+version: "3"
+
+volumes:
+  node_data: {}
+
+networks:
+  node-net:
+    external: false
+
 services:
-  server:
-    build:
-      context: ./server/
-    command: /usr/app/node_modules/.bin/node src/index.js
-    volumes:
-      - ./server/:/usr/app
-      - /usr/app/node_modules
-    ports:
-      - "5000:5000"
-    # env_file: ./server/.env # TODO - uncomment this to auto-load your .env file!
-    environment:
-      - NODE_ENV=development
-      - CHOKIDAR_USEPOLLING=true
-  client:
-    build:
-      context: ./client/
-    command: npm start
-    volumes:
-      - ./client/:/usr/app
-      - /usr/app/node_modules
-    depends_on:
-      - server
-    ports:
-      - "3000:3000"
+    client:
+        image: node:12.10.0
+        container_name: reactjs
+        expose:
+            - 3000
+        environment:
+            - REACT_APP_SOCKET_URL=http://localhost:5000
+        networks:
+        - node-net
+        restart: on-failure
+        deploy:
+          restart_policy:
+            condition: on-failure
+        ports:
+            - 3000:3000
+        volumes:
+            - "./client/:/home/app/"
+        depends_on:
+        - server
+        command: sh -c "cd /home/app && npm install --save && npm start"
+        
+    server:
+        image: node:12.10.0-alpine
+        container_name: nodejs
+        expose:
+            - 5000
+        environment:
+            - DATABASE_URL=mongodb://db:27017/maps
+        networks:
+        - node-net
+        restart: on-failure
+        deploy:
+          restart_policy:
+            condition: on-failure
+        ports:
+            - 5000:5000
+        volumes:
+            - "./server/:/home/app/"
+        depends_on:
+        - db
+        links:
+        - db
+        command: sh -c "cd /home/app && npm install --save && npm run seed && npm run start"
+
+    db:
+        image: mongo
+        container_name: mongodb
+        networks:
+        - node-net
+        restart: on-failure
+        deploy:
+          restart_policy:
+            condition: on-failure
+        ports:
+        - 27017:27017
