@@ -94,7 +94,7 @@ $ /server npm start
 #### Or Run Docker 🐳
 
 ```
-$ docker-compose up
+$ docker-compose up -d
 ```
 
 <br>
