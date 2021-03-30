@@ -92,7 +92,9 @@ $ /server npm start
 ```
 
 #### Or Run Docker 🐳
-
+```
+$ docker network create node-net
+```
 ```
 $ docker-compose up -d
 ```
