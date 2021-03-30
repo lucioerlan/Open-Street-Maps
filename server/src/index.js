@@ -11,7 +11,7 @@ const ip = require('ip');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
-const connectDB = require('./src/database/db-config');
+const connectDB = require('./database/db-config');
 require('dotenv').config();
 require('colors');
 
@@ -19,10 +19,10 @@ const {
   responseMiddleware,
   unauthorizedMiddleware,
   securityMiddleware,
-} = require('./src/middlewares');
+} = require('./middlewares');
 
-const StreetMap = require('./src/routes/StreetMap-routes');
-const SwaggerRoutes = require('./src/doc/swagger-config');
+const StreetMap = require('./routes/StreetMap-routes');
+const SwaggerRoutes = require('./doc/swagger-config');
 
 app.use(compression());
 app.use(cors());

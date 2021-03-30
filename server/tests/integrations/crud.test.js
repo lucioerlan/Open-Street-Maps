@@ -30,7 +30,10 @@ describe('Reading Job', () => {
 
 describe('Update Job', () => {
   it('update a tracking', (done) => {
-    Tracking.findOneAndUpdate({ plate: 'WBAUC73569V525201' }, { plate: '0102030405' })
+    Tracking.findOneAndUpdate(
+      { plate: 'WBAUC73569V525201' },
+      { plate: '0102030405' }
+    )
       .then(() => Tracking.findOne({ plate: '0102030405' }))
       .then((res) => {
         assert(res.plate === '0102030405');
