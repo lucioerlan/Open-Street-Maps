@@ -1,55 +1,150 @@
 {
 	"info": {
-		"_postman_id": "7b503b6c-837b-4e68-9c96-8ee41cb80e22",
-		"name": "API-Advanced-Open-Street-Maps",
+		"_postman_id": "eabacc23-eb98-4f5d-aa6b-b71b1e68927e",
+		"name": "Open-Street-Maps",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get all tracking",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"content-type": true
-				}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "  {\r\n          \"id\": \"9fTp63fpZsngr\",\r\n          \"tracking\": \"911970341-4\",\r\n          \"lat\": \"49.6617919\",\r\n          \"lon\": \"32.0477111\",\r\n          \"plate\": \"WBAUC73569V525201\"\r\n}"
+			"name": "ROUTES",
+			"item": [
+				{
+					"name": "GET ALL MAPA",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n          \"id\": \"9fTp63fpZsngr\",\r\n          \"tracking\": \"911970341-4\",\r\n          \"lat\": \"49.6617919\",\r\n          \"lon\": \"32.0477111\",\r\n          \"plate\": \"WBAUC73569V525201\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/get-all-mapa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"get-all-mapa"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:5000/api/tracking",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"tracking"
-					]
+				{
+					"name": "GET ID MAPA",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/getid-mapa?id=60978a7679b72839d8f8f4eb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"getid-mapa"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "60978a7679b72839d8f8f4eb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "STORE MAPA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tracking\": \"553366\",\r\n    \"lat\": \"10.74044\",\r\n    \"lon\": \"-74.755272\",\r\n    \"plate\": \"WBAPM73589A254790\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/store-mapa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"store-mapa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE MAPA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"60978a7679b72839d8f8f4eb\",\r\n    \"tracking\": \"553366\",\r\n    \"lat\": \"10.74045\",\r\n    \"lon\": \"-74.755278\",\r\n    \"plate\": \"WBAP1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/update-mapa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"update-mapa"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Insert a tracking",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
-			},
-			"response": []
+			]
 		}
 	]
 }
