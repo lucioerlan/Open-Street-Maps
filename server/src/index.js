@@ -21,7 +21,7 @@ const {
   securityMiddleware,
 } = require('./middlewares');
 
-const StreetMap = require('./routes/StreetMap-routes');
+const StreetMap = require('./routes/mapa-routes');
 const SwaggerRoutes = require('./doc/swagger-config');
 
 app.use(compression());
