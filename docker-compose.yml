@@ -16,7 +16,7 @@ services:
         environment:
             - REACT_APP_API_URL=http://localhost:5000/api
             - REACT_APP_SOCKET_URL=http://localhost:5000
-            - REACT_APP_KEY_GOOGLE_MAPS=AIzaSyAfW6kN66wZbJdRFIBVVFj8bUH3st0EQjw
+            - REACT_APP_KEY_GOOGLE_MAPS=____________YOU_TOKEN_GOOGLE____________
         networks:
         - node-net
         restart: on-failure
