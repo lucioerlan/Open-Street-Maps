@@ -7,7 +7,7 @@ const seedData = require('./SeedData');
 
   seeder.connect(await connectDB(), () => {
     // Load Mongoose models
-    seeder.loadModels([join('src/models/StreetMap-models')]);
+    seeder.loadModels([join('src/schema/mapa-schema')]);
 
     seeder.clearModels(['tracking'], () => {
 
