@@ -1,71 +1,145 @@
-swagger: "2.0"
+openapi: 3.0.0
 info:
-  description: '<font size="2" color="red">MIT Licença</font>'
-  version: "1.0.3"
-  title: "Tracking Api"
-  license:
-    name: "REST TO SOAP"
-    url: "https://github.com/lucioerlan"
-host: "localhost:5000"
-basePath: "/api"
-schemes:
-  - "http"
+  description: '<font size="2" color="red">MIT License</font>'
+  title: "Open-Street-Maps"
+  contact:
+    name: Erlan Lucio
+    url: https://github.com/lucioerlan
+  version: '1.0'
+servers:
+- url: http://localhost:5000/api
+  variables: {}
 paths:
-  /tracking/:
+  /get-all-mapa:
     get:
       tags:
-        - "ROUTES"
-      summary: "Response to the request on mongoDB"
-      description: "Get all tracking"
-      operationId: "get-tracking"
-      produces:
-        - "application/xml"
-        - "application/json"
-      parameters: []
+      - ROUTES
+      summary: GET ALL MAPA
+      operationId: GETALLMAPA
       responses:
-        default:
-          description: "successful operation"
-
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /getid-mapa:
+    get:
+      tags:
+      - ROUTES
+      summary: GET ID MAPA
+      operationId: GETIDMAPA
+      parameters:
+      - name: id
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: 60978a7679b72839d8f8f4eb
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /store-mapa:
     post:
       tags:
-        - "ROUTES"
-      summary: "Post tracking."
-      description: "Insert a tracking"
-      operationId: "post-tracking"
-      produces:
-        - "application/xml"
-        - "application/json"
-      parameters:
-        - in: "body"
-          name: "body"
-          description: "List of tracking"
-          required: true
-          schema:
-            type: "array"
-            items:
-              $ref: "#/definitions/tracking"
+      - ROUTES
+      summary: STORE MAPA
+      operationId: STOREMAPA
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/STOREMAPAREQUEST'
+            example:
+              tracking: '553366'
+              lat: '10.74044'
+              lon: '-74.755272'
+              plate: WBAPM73589A254790
+        required: true
       responses:
-        default:
-          description: "successful operation"
-
-definitions:
-  tracking:
-    type: "object"
-    required:
-      - "id"
-      - "tracking"
-      - "lat"
-      - "lon"
-    properties:
-      id:
-        type: "string"
-      tracking:
-        type: "string"
-      lat:
-        type: "number"
-        multipleOf: 2.5
-      lon:
-        type: "number"
-        multipleOf: 2.5
-      plate:
-        type: "string"
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /update-mapa:
+    put:
+      tags:
+      - ROUTES
+      summary: UPDATE MAPA
+      operationId: UPDATEMAPA
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UPDATEMAPAREQUEST'
+            example:
+              id: 60978a7679b72839d8f8f4eb
+              tracking: '553366'
+              lat: '10.74045'
+              lon: '-74.755278'
+              plate: WBAP1
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+components:
+  schemas:
+    STOREMAPAREQUEST:
+      title: STOREMAPAREQUEST
+      required:
+      - tracking
+      - lat
+      - lon
+      - plate
+      type: object
+      properties:
+        tracking:
+          type: string
+        lat:
+          type: string
+        lon:
+          type: string
+        plate:
+          type: string
+      example:
+        tracking: '553366'
+        lat: '10.74044'
+        lon: '-74.755272'
+        plate: WBAPM73589A254790
+    UPDATEMAPAREQUEST:
+      title: UPDATEMAPAREQUEST
+      required:
+      - id
+      - tracking
+      - lat
+      - lon
+      - plate
+      type: object
+      properties:
+        id:
+          type: string
+        tracking:
+          type: string
+        lat:
+          type: string
+        lon:
+          type: string
+        plate:
+          type: string
+      example:
+        id: 60978a7679b72839d8f8f4eb
+        tracking: '553366'
+        lat: '10.74045'
+        lon: '-74.755278'
+        plate: WBAP1
+tags:
+- name: ROUTES

@@ -1,19 +1,19 @@
 const express = require('express');
 
 const router = express.Router();
-const fs = require('fs');
-const path = require('path');
-const swaggerTools = require('swagger-tools');
-const jsyaml = require('js-yaml');
+const { readFileSync } = require('fs');
+const { join } = require('path');
+const { serve, setup } = require('swagger-ui-express');
+const { load } = require('js-yaml');
 
-const spec = fs.readFileSync(
-  path.join(__dirname, '../doc/swagger.yaml'),
+const swaggerDocument = readFileSync(
+  join(__dirname, '../doc/swagger.yaml'),
   'utf8'
 );
-const swaggerDoc = jsyaml.safeLoad(spec);
 
-swaggerTools.initializeMiddleware(swaggerDoc, (middleware) => {
-  router.use(middleware.swaggerUi());
-});
+const swaggerData = load(swaggerDocument);
+
+// api documentation
+router.use('/docs', serve, setup(swaggerData));
 
 module.exports = router;
