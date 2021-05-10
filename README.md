@@ -15,7 +15,7 @@
 
   </h3> 
   <p align="center">
-    <img src="https://user-images.githubusercontent.com/67064886/104824248-dded7a00-582e-11eb-8d25-894b2003383d.gif" alt="Logo" >
+    <img src="https://s3.gifyu.com/images/drrr.gif" alt="Logo" >
     <br />
     <br />
     <a href="https://github.com/lucioerlan/Advanced-Open-Street-Maps/issues">Report Bug</a>
@@ -28,7 +28,11 @@
 <!-- ABOUT THE PROJECT -->
 ## 🤔 About The Project
 
-A free, interactive map, containing several features.
+A free, interactive map. With the best leaflet plugins..
+
+**-** <a href="hhttp://frontend-mapa.herokuapp.com/app/home" target="_blank">Frontend</a>
+
+**-** <a href="https://backend-mapa.herokuapp.com/api/docs/" target="_blank">Backend</a>
 
 <br>
 
@@ -66,13 +70,10 @@ $ node src/database/seeds/Seed.js
 <br>
 
 
+
 <!-- RUNNING TESTS -->
 
-## 🤓 Running tests On the server and API documents
-
-```bash 
-$ cd Advanced-Open-Street-Maps/server
-```
+## 🤓 Documentation and running tests
 
 * Access swagger http://localhost:5000/api/docs 🥇
 * $ npm test
