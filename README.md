@@ -15,7 +15,7 @@
 
   </h3> 
   <p align="center">
-    <img src="https://i.ibb.co/1ZNxwjG/drrr.gif" alt="Logo" >
+    <img src="https://user-images.githubusercontent.com/67064886/117664894-a8232700-b178-11eb-9473-b6a4a0dd408d.gif" alt="Logo" >
     <br />
     <br />
     <a href="https://github.com/lucioerlan/Advanced-Open-Street-Maps/issues">Report Bug</a>
