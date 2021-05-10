@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
 const ShowMap = ({ steine, onSelectStein, selectedStein }) => {
   const theme = useTheme();
   const classes = useStyles();
-  const [center, setCenter] = useState([48.0684339, 7.3273853]);
+  const [center, setCenter] = useState([-28.16770242, -52.03145528]);
   const zoom = 9;
 
   const defaultIconMarkup = renderToStaticMarkup(<IconMap theme={theme.palette.primary.main} />);

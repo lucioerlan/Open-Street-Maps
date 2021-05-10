@@ -61,10 +61,10 @@ const ModalAdd = () => {
     try {
       await api.post('/store-mapa', state);
       setTimeout(() => setAlert({
-        message: 'Data successfully saved!',
+        message: 'Success in adding information!',
         variant: 'success'
       }),
-      500);
+      300);
 
       setOpen(false);
     } catch (err) {
@@ -85,8 +85,8 @@ const ModalAdd = () => {
   const MySnackbar = () => (
     <Snackbar
       anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right'
+        vertical: 'bottom',
+        horizontal: 'center'
       }}
       open={!!alert.message}
     >

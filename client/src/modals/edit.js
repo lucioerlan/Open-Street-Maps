@@ -53,7 +53,7 @@ const ModalEdit = (props) => {
         message: 'Success in changing information!',
         variant: 'success'
       }),
-      500);
+      300);
       setTimeout(() => props.onClose(), 1700);
     } catch (err) {
       setAlert({
@@ -66,8 +66,8 @@ const ModalEdit = (props) => {
   const MySnackbar = () => (
     <Snackbar
       anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right'
+        vertical: 'bottom',
+        horizontal: 'center'
       }}
       open={!!alert.message}
     >

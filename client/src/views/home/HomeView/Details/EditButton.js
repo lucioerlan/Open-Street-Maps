@@ -45,7 +45,7 @@ const EditButton = ({ className, itens, ...rest }) => {
           <SvgIcon fontSize="small" className={classes.actionIcon}>
             <EditIcon />
           </SvgIcon>
-          Editar
+          Edit
         </Button>
       </Grid>
       {openDialog && (
