@@ -30,7 +30,7 @@
 
 A free, interactive map. With the best leaflet plugins..
 
-**-** <a href="hhttp://frontend-mapa.herokuapp.com/app/home" target="_blank">Frontend</a>
+**-** <a href="https://frontend-mapa.herokuapp.com" target="_blank">Frontend</a>
 
 **-** <a href="https://backend-mapa.herokuapp.com/api/docs/" target="_blank">Backend</a>
 
