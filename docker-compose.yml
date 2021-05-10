@@ -14,7 +14,9 @@ services:
         expose:
             - 3000
         environment:
+            - REACT_APP_API_URL=http://localhost:5000/api
             - REACT_APP_SOCKET_URL=http://localhost:5000
+            - REACT_APP_KEY_GOOGLE_MAPS=____YOUTOKEN____
         networks:
         - node-net
         restart: on-failure
