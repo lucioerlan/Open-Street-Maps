@@ -1,5 +1,5 @@
 const assert = require('assert');
-const Tracking = require('../../src/models/StreetMap-models');
+const Tracking = require('../../src/schema/mapa-schema');
 
 let tracking;
 
