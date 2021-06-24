@@ -11,7 +11,7 @@ import {
   ThemeProvider
 } from '@material-ui/core';
 import { createTheme } from 'src/theme';
-import routes from 'src/routes';
+import routes from 'src/Routes';
 import useSettings from 'src/hooks/useSettings';
 
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
