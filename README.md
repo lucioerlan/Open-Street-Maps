@@ -30,9 +30,9 @@
 
 A free, interactive map. With the best leaflet plugins..
 
-**-** <a href="https://frontend-mapa.herokuapp.com" target="_blank">Frontend</a>
+**-** <a href="https://frontend-open-street.herokuapp.com" target="_blank">Frontend</a>
 
-**-** <a href="https://backend-mapa.herokuapp.com/api/docs/" target="_blank">Backend</a>
+**-** <a href="https://backend-open-street.herokuapp.com/api/docs/" target="_blank">Backend</a>
 
 <br>
 
