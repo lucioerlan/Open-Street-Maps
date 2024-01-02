@@ -36,7 +36,7 @@
     "history": "^5.0.0",
     "jss": "^10.2.0",
     "jss-rtl": "^0.3.0",
-    "leaflet": "1.5.1",
+    "leaflet": "1.9.4",
     "leaflet-draw": "1.0.4",
     "lodash": "^4.17.19",
     "moment-timezone": "0.5.26",
